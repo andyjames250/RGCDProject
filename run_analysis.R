@@ -47,4 +47,4 @@ names(X_combined) <- features_filtered_names
 merged <- cbind(y_combined, subject_combined, X_combined)
 melted <- melt(merged)
 tidy <- ddply(melted, .(activity, subject, variable), summarise, mean=mean(value, na.rm=TRUE))
-write.csv(tidy, "tidy.txt")
+write.csv(tidy, "tidy.txt", row.names=FALSE)
