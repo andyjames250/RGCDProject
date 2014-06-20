@@ -19,4 +19,4 @@ The script run_analysis.R processes the Samsung data into a tidy data set tidy.t
 Data Dictionary
 --------------------------------------------------------
 
-Refer to codebook.txt in this repository.
+Refer to [codebook.txt](https://github.com/andyjames250/RGCDProject/blob/master/codebook.txt) in this repository.
