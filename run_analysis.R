@@ -40,7 +40,8 @@ activity_labels <- read.csv("./UCI HAR Dataset/activity_labels.txt", header=FALS
 # 5. For activities: append test to training data, convert to factors with level
 # names and label the column
 y_combined <- rbind(y_train, y_test)
-levels <- levels(activity_labels[,2])
+# levels <- levels(activity_labels[,2])
+levels <- as.character(activity_labels[,2]) # This is required to preserve order
 y_combined[,1] <- factor(y_combined[,1])
 levels(y_combined[,1]) <- levels
 names(y_combined) <- c("activity")
